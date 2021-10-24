@@ -6,6 +6,10 @@ const messageSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 		},
+		userId: {
+			type: mongoose.Schema.Types.ObjectId,
+			required: true,
+		},
 	},
 	{
 		timestamp: true,

@@ -9,6 +9,7 @@ const addMessage = asyncHandler(async (req, res) => {
 		const { message } = req.body;
 		const newMsg = new Sms();
 		newMsg.msg = message;
+		newMsg.userId = req.user._id;
 		await newMsg.save();
 		res.json({
 			msg: 'Done',
